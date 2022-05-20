@@ -23,7 +23,7 @@ gallery.addEventListener('click', (event) => {
     return;
   }
     const imageLink = event.target.dataset.source;
-    basicLightbox.create(`
+    const instance = basicLightbox.create(`
 		<img src="${imageLink}">
 	`).show()
 })   
