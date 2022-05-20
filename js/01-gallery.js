@@ -6,7 +6,7 @@ console.log(gallery);
 
 const markup = galleryItems
   .map((item) => `<div class="gallery__item">
-  <a class="gallery__link" href="xx${item.preview}">
+  <a class="gallery__link" href="${item.preview}">
     <img
       class="gallery__image"
       src="${item.preview}"
