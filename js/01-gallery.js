@@ -19,9 +19,10 @@ const markup = galleryItems
     
 gallery.insertAdjacentHTML("afterbegin", markup);
 gallery.addEventListener('click', (event) => {
-  
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
     const imageLink = event.target.dataset.source;
-    console.log(imageLink);
     basicLightbox.create(`
 		<img src="${imageLink}">
 	`).show()
